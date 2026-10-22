@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chatgratui</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Salle de discussion</p>
+          <h1>chatgratui</h1>
+        </div>
+        <div class="badge">
+          <span class="dot"></span>
+          <span id="user-count">1 en ligne</span>
+        </div>
+      </header>
+
+      <main class="chat-panel">
+        <div id="messages" class="messages" aria-live="polite"></div>
+        <div id="typing" class="typing" aria-live="polite"></div>
+      </main>
+
+      <form id="chat-form" class="composer">
+        <input
+          id="username"
+          type="text"
+          maxlength="24"
+          placeholder="Votre pseudo"
+          aria-label="Votre pseudo"
+        />
+        <input
+          id="message"
+          type="text"
+          maxlength="300"
+          placeholder="Écrivez votre message..."
+          aria-label="Message"
+          autocomplete="off"
+        />
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

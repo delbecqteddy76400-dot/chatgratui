@@ -1,0 +1,22 @@
+{
+  "name": "chatgratui",
+  "version": "1.0.0",
+  "description": "Site de chat en temps réel avec Socket.io",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "chat",
+    "socket.io",
+    "realtime",
+    "express"
+  ],
+  "author": "Copilot",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}
